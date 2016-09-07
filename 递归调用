@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+ int fun(int n);
+ int s,m=5;
+ s=fun(5);
+ printf("%d\n",s);
+ return 0;
+}
+int fun(int n)
+{
+ if(n==1)  //临界点，避免出现无限调用的情况
+ return 1;
+ else
+ return n*fun(n-1);  //主要体验一下递归调用的思想
+}
